@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
@@ -109,6 +108,8 @@ class Main_page(Base):
 
     # Methods
     def category(self):
+        self.driver.get(self.url)
+        self.driver.maximize_window()
         self.get_current_url()
         self.click_button_women()
         self.driver.refresh()
